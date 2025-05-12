@@ -1,0 +1,6 @@
+{
+  "main": "app.ts",
+  "scripts": {
+    "start-server": "tsx ./app.ts"
+  }
+}
