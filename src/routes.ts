@@ -1,13 +1,13 @@
 import Router from 'koa-router';
-import adapter from '../adapter';
+import book_list from '../mcmasteful-book-list.json';
 const router = new Router();
 
 router.get('/books', async (ctx) => {
     const filters = ctx.query.filters as Array<{ from?: number, to?: number }>;
     // TODO: validate filters
     try {
-        const books = await adapter.listBooks(filters);
-        ctx.body = books;
+        console.log (book_list);
+        ctx.body = book_list;
     } catch (error) {
         ctx.status = 500;
         ctx.body = { error: `Failed to fetch books due to: ${error}` };
