@@ -1,0 +1,23 @@
+### Create a new book # @name createBook 
+POST http://localhost:3000/books 
+Content-Type: application/json
+
+{
+"name": "Endless Night", 
+"price": 23.99, 
+"description": "A crime novel published in 1967", 
+"author": "Agatha Christie", 
+"image": "https://upload.wikimedia.org/wikipedia/en/d/df/Endless_Night_First_Edition_Cover_1967.jpg?20220724094454"
+}
+
+### Store the bookId from the response in a variable 
+@bookId = {{'createBook.response.body.id'}}
+
+### Get all books in pricerange $20-$25 
+GET http://localhost:3000/books/?filters[0][from]=20&filters[0][to]=25
+
+### Delete the book created 
+DELETE http://localhost:3000/books/{{bookId}}
+
+### Get all books 
+GET http://localhost:3000/books
