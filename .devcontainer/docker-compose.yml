@@ -11,5 +11,5 @@ services:
       - ../..:/workspaces:cached
     command: sleep infinity
 
-    mongo:
-     image: mongo:6.0.6
+  mongo:
+    image: mongo:6.0.6
