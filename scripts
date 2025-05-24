@@ -1,6 +1,7 @@
 {
   "main": "app.ts",
   "scripts": {
-    "start-server": "tsx ./app.ts"
+    "start-server": "tsx ./app.ts",
+    "lint": "eslint .  --ext .js"
   }
 }
