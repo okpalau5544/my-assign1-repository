@@ -1,5 +1,5 @@
 import Router from 'koa-router';
-import adapter from '../adapter';
+import adapter from '../adapter/assignment-3';
 const router = new Router();
 
 router.get('/books', async (ctx) => {
