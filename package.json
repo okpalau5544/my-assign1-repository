@@ -6,7 +6,10 @@
     "scripts": {
         "start-server": "ts-node src/server.ts",
         "lint": "eslint .  --ext .ts",
-        "fix-lint": "eslint . --ext .ts --fix"
+        "fix-lint": "eslint . --ext .ts --fix",
+        "test": "vitest",
+        "test:run": "vitest run",
+        "test:coverage": "vitest run --coverage"
     },
     "keywords": [],
     "author": "",
@@ -24,6 +27,7 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.27.0",
+        "@types/jest": "^29.5.14",
         "@types/koa": "^2.15.0",
         "@types/koa__cors": "^5.0.0",
         "@types/koa-qs": "^2.0.3",
@@ -32,6 +36,7 @@
         "eslint": "^9.27.0",
         "ts-node": "^10.9.2",
         "typescript": "^5.8.3",
-        "typescript-eslint": "^8.32.1"
+        "typescript-eslint": "^8.32.1",
+        "vitest": "^3.2.2"
     }
 }

@@ -1,0 +1,60 @@
+### Request to place orders that exist in the book list
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "books": [
+    {
+      "id": 1,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "quantity": 1
+    }
+  ]
+}
+
+### Request to place copies of a book on arbitrary shelves
+POST http://localhost:3000/warehouse/shelves
+Content-Type: application/json
+
+{
+  "shelves": [
+    {
+      "bookId": 1,
+      "quantity": 5
+    },
+    {
+      "bookId": 2,
+      "quantity": 3
+    }
+  ]
+}
+
+### Request to fulfill orders by selecting copies of the ordered books off the shelves
+POST http://localhost:3000/warehouse/fulfill
+Content-Type: application/json
+
+{
+  "orders": [
+    {
+      "orderId": 1,
+      "shelfId": 1
+    },
+    {
+      "orderId": 2,
+      "shelfId": 2
+    }
+  ]
+}
+
+### Request to list all current orders
+GET http://localhost:3000/orders
+
+### Request to get the stock level of a book
+GET http://localhost:3000/warehouse/books/1
+GET http://localhost:3000/warehouse/books/2
+
+### Request to look up the details of an individual book, including its current stock level
+GET http://localhost:3000/books/bookID/1

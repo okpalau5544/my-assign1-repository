@@ -4,9 +4,13 @@
   "_version": "20.1.0",
 
   "compilerOptions": {
-    "lib": ["es2023"],
+    "lib": ["es2022"],
     "module": "node16",
     "target": "es2022",
+    "types": [
+      "vitest/importMeta",
+      "jest"
+    ],
 
     "strict": true,
     "esModuleInterop": true,
@@ -14,5 +18,8 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node16",
     "resolveJsonModule": true,
+  },
+  "include": ["src/**/*.ts", "./adapter/warehouse.ts", "./adapter/assignment-3.ts", "./adapter/assignment-4.ts", "./test/**/*.ts"],
+  "exclude": ["node_modules"],
   }
-}
+// This file is used to configure TypeScript for the project.
